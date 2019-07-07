@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Trivia Game</title>
+</head>
+<body>
+
+    <form id="quiz" name="quiz">
+    <div class="grid">
+    
+            <!--Header for trivia game-->
+            <h1>Web Dev Quiz</h1>
+            <!-- Line under the header-->
+            <hr style="margin-top: 20px">
+
+            <!-- All questions for the quiz-->
+            <div id="scrollBar">
+            <div class="choices">
+                <p>1. Which language is used for styling web pages?</p>
+                <input type="radio" id="questions" name="question1" value="HTML">HTML<br>
+                <input type="radio" id="questions" name="question1" value="CSS">CSS<br>
+                <input type="radio" id="questions" name="question1" value="Ruby">Ruby<br>
+                <input type="radio" id="questions" name="question1" value="C++">C++<br>
+
+                <p>2. Javascript is most commonly used as a client side scripting language.</p>
+                <input type="radio" id="questions" name="question2" value="True">True<br>
+                <input type="radio" id="questions" name="question2" value="False">False<br>
+
+                <p>3. Java is short for Javscript.</p>
+                <input type="radio" id="questions" name="question3" value="True">True<br>
+                <input type="radio" id="questions" name="question3" value="False">False<br>
+
+                <p>4. What does the last "S" in "CSS" stand for??</p>
+                <input type="radio" id="questions" name="question4" value="Sheet">Sheet<br>
+                <input type="radio" id="questions" name="question4" value="Show">Show<br>
+                <input type="radio" id="questions" name="question4" value="Store">Store<br>
+                <input type="radio" id="questions" name="question4" value="Storage">Storage<br>
+
+                <p>5. Which of the following are front end development languages?</p>
+                <input type="radio" id="questions" name="question5" value="HTML">HTML<br>
+                <input type="radio" id="questions" name="question5" value="CSS">CSS<br>
+                <input type="radio" id="questions" name="question5" value="Javascript">Javascript<br>
+                <input type="radio" id="questions" name="question5" value="All of the above">All of the above<br>
+
+
+           
+            </div>
+            </div>
+            <hr style="margin-top: 30px;">
+           
+            <input id="button" type="button" value="Submit" onclick="check()";>
+
+            <div id="after_submit">
+                <p id="numberCorrect">wahoo u finished</p>
+
+            </div>
+    </div>
+    </form>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
