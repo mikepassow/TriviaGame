@@ -11,7 +11,10 @@
 
     <form id="quiz" name="quiz">
     <div class="grid">
-    
+
+
+            <!--Timer-->
+            <h1 id="timer">05:00</h1>
             <!--Header for trivia game-->
             <h1>Web Dev Quiz</h1>
             <!-- Line under the header-->
@@ -52,16 +55,17 @@
             </div>
             <hr style="margin-top: 30px;">
            
-            <input id="button" type="button" value="Submit" onclick="check()";>
+            <input onclick="clearInterval(timerStop)" id="timerStop" type="button" value="Submit" onclick="check()";>
 
             <div id="after_submit">
-                <p id="numberCorrect">wahoo u finished</p>
+                <p id="numberCorrect">Correct</p>
+                <p id="numberIncorrect">Incorrect</p>
 
             </div>
     </div>
     </form>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/app2.js"></script>
 </body>
 </html>
