@@ -1,5 +1,6 @@
 
 
+
 function check() {
 
     var question1 = document.quiz.question1.value;
@@ -46,15 +47,22 @@ function check() {
     else if (question5 === 'CSS' || 'HTML' || 'Javscript'){
         incorrect++
     }
+
     document.getElementById("after_submit").style.visibility = "visible";
     document.getElementById("numberCorrect").innerHTML = "You got " + correct + " correct!";
     document.getElementById("numberIncorrect").innerHTML = "You got " + incorrect + " incorrect!";
 
 }
 
+$("#startButton").on("click", start);
+
+function start() {
+	$("#startButton").hide();
+	$("#mainContainer").show();
+
 
 function startTimer(duration, display) {
-    var timer = //duration, minutes, seconds;
+    var timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
@@ -64,17 +72,19 @@ function startTimer(duration, display) {
 
         display.text(minutes + ":" + seconds);
 
-        if (--timer <= 0) {
-            timer = duration;
+        if (--timer < 0) {
+            timer = alert('Times up! Please submit your quiz');
         }
     }, 1000);
+    
 
-   
 }
 
 jQuery(function ($) {
-    var fiveMinutes = 60 * 5,
+    var fiveMinutes = 60 * 3,
         display = $('#timer');
     startTimer(fiveMinutes, display);
 });
 
+
+};

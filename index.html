@@ -9,20 +9,22 @@
 </head>
 <body>
 
-    <form id="quiz" name="quiz">
-    <div class="grid">
+    <div id="mainContainer">
+    <form id="quiz" name="quiz"> <!--Form for grid-->
+    <div class="grid"> <!---Main Grid-->
 
 
-            <!--Timer-->
-            <h1 id="timer">05:00</h1>
+        <div>
+       
             <!--Header for trivia game-->
-            <h1>Web Dev Quiz</h1>
-            <!-- Line under the header-->
-            <hr style="margin-top: 20px">
+            <h1 id="header">Web Dev Quiz</h1>
+            <!--Timer-->
+            <h1 id="timer">03:00</h1>
+            
 
             <!-- All questions for the quiz-->
-            <div id="scrollBar">
-            <div class="choices">
+            <div id="choices">
+                <div id="scrollBar">
                 <p>1. Which language is used for styling web pages?</p>
                 <input type="radio" id="questions" name="question1" value="HTML">HTML<br>
                 <input type="radio" id="questions" name="question1" value="CSS">CSS<br>
@@ -53,9 +55,14 @@
            
             </div>
             </div>
-            <hr style="margin-top: 30px;">
+            <br>
+            <br>
+            
+            <!--Submit Button-->
            
-            <input onclick="clearInterval(timerStop)" id="timerStop" type="button" value="Submit" onclick="check()";>
+            <button id="button" type="button" value="Submit" onclick="check()";>Submit</button>
+
+            <hr style="margin-top: 30px">
 
             <div id="after_submit">
                 <p id="numberCorrect">Correct</p>
@@ -63,7 +70,13 @@
 
             </div>
     </div>
+    </div>
     </form>
+</div>
+<!-- Start Button for Game-->
+<div id="startContainer" onclick="start()">
+<button id="startButton" onclick="start()">START BUTTON!</button>
+</div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/javascript/app2.js"></script>
